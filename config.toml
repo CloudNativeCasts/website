@@ -1,0 +1,4 @@
+baseURL = "https://cloudnativecasts.com/"
+languageCode = "en-us"
+title = "CloudNativeCasts"
+theme = "cloudnativecasts"

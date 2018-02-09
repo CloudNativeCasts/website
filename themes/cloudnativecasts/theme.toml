@@ -1,0 +1,15 @@
+# theme.toml template for a Hugo theme
+# See https://github.com/gohugoio/hugoThemes#themetoml for an example
+
+name = "CloudNativeCasts"
+license = "MIT"
+licenselink = "https://github.com/cloudnativecasts/website/blob/master/LICENSE.md"
+description = ""
+homepage = "https://cloudnativecasts.com/"
+tags = []
+features = []
+min_version = "0.32.3"
+
+[author]
+  name = "Matthias Loibl"
+  homepage = "https://matthiasloibl.com"

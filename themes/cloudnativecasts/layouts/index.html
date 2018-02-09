@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<head>
+		{{ partial "header.html" .}}
+	</head>
+</head>
+<body>
+
+	<ul>
+		{{ range .Data.Pages.ByWeight }}
+		<li><a href="{{ .Permalink }}">{{ .Title }} - {{ .Params.Length }}</a></li>
+		{{ end }}
+	</ul>
+
+</body>
+</html>
