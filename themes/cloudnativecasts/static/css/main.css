@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+header a {
+    text-decoration: none;
+}
+
+header h1 {
+    display: inline-block;
+    color: white;
+    font-weight: 300;
+    font-size: 32px;
+    margin: 16px 0;
+}
+
+header .icons {
+    text-align: right;
+}
+
+header .icons a {
+    display: inline-block;
+    padding: 16px;
+    padding-left: 4px;
+    height: 36px;
+    color: white;
+}
+
+footer {
+    padding: 64px 0;
+    background-color: #808080;
+    color: white;
+}
+
+footer a {
+    color: white;
+}
+
+footer .social {
+    text-align: center;
+}
+
+footer .social a {
+    display: inline-block;
+    padding: 8px;
+    height: 36px;
+}
+
+footer .sitemap {
+    padding: 8px;
+    text-align: center;
+    font-size: 12px;
+}
+
+footer .sitemap a {
+    text-decoration: none;
+}
+
+.hero {
+    background-color: #326ce5;
+    padding: 64px 0;
+    color: white;
+    font-size: 64px;
+    font-weight: 300;
+}
+
+section.videos {
+    padding: 64px 0;
+    background-color: #fafafa;
+}
+
+section.videos ul {
+    padding: 0;
+    border: 1px solid #eee;
+}
+
+section.videos ul li {
+    list-style: none;
+}
+
+section.videos ul li .row {
+    margin: 0;
+    padding: 64px;
+}
+
+section.videos ul li a {
+    text-decoration: none;
+}
+
+section.videos ul li span.episode {
+    font-size: 18px;
+    color: #999;
+}
+
+section.videos ul li h2.title {
+    font-size: 24px;
+    color: rgba(0, 0, 0, .80);
+    margin-top: 8px;
+    margin-bottom: 16px;
+}
+
+section.video {
+    background-color: #333;
+    color: white;
+}
+
+.youtube {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: -25px;
+    height: 0;
+}
+
+.youtube iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

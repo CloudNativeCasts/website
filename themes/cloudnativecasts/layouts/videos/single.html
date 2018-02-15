@@ -1,3 +1,56 @@
-<a href="https://www.youtube.com/watch?v={{ .Page.Params.youtubeid }}">{{ .Page.Params.youtubeid }}</a>
-<br>
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/{{ .Page.Params.youtubeid }}?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<!DOCTYPE html>
+<html>
+<head>
+    <head>
+    {{ partial "header.html" . }}
+    </head>
+</head>
+<body>
+
+<header style="background-color: #222;">
+    {{ partial "navigation.html" . }}
+</header>
+
+<main>
+    <section class="video">
+        <div class="container">
+            <div style="text-align: center">
+                <h3 style="margin: 0;padding-top: 32px;font-weight: normal;color: #888">{{ dateFormat "January 02, 2006" .Date }}</h3>
+                <h1 style="margin: 0;padding: 16px 0;font-size: 32px;font-weight: 300;">{{ .Title }}</h1>
+            </div>
+
+            <div class="youtube">
+                <iframe src="https://www.youtube.com/embed/{{ .Page.Params.youtubeid }}?rel=0&amp;showinfo=0"
+                        width="1600" height="900" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+                </iframe>
+            </div>
+            <div class="row">
+            {{ if .Page.Prev }}
+                <a href="{{ .Page.Prev.URL }}">
+                    <div class="col-xs-6">
+                        <span>Next</span><br>{{ .Page.Prev.Title }}
+                    </div>
+                </a>
+            {{ end }}
+                <br>
+            {{ if .Page.Next }}
+                <a href="{{ .Page.Next.URL }}">
+                    <div class="col-xs-6">
+                        <span>Next</span><br>{{ .Page.Next.Title }}
+                    </div>
+                </a>
+            {{ end }}
+            </div>
+        </div>
+    </section>
+    <div class="container">
+    {{ .Content }}
+
+
+    </div>
+</main>
+
+{{ partial "footer.html" . }}
+
+</body>
+</html>
