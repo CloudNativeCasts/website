@@ -1,6 +1,6 @@
 ---
-title: "A Simple Web App Written in Go"
-date: 2018-02-02T12:15:09+01:00
+title: "A Simple Web App written in Go"
+date: 2018-02-01T12:00:00+01:00
 draft: false
 youtubeID: oxm_ib1VhG8
 length: 4:53
@@ -9,4 +9,4 @@ weight: 1
 ---
 
 In this video we're going to create a small http server
-that responds with random cloud native compute foundation project names.
+that responds with random Cloud Native Computing Foundation project names.

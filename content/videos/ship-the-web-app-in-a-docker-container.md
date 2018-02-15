@@ -1,6 +1,6 @@
 ---
 title: "Ship the Web App in a Docker Container"
-date: 2018-02-02T12:18:59+01:00
+date: 2018-02-01T16:20:00+01:00
 draft: false
 youtubeID: yEVkKZ8Q5h8
 length: 4:20
