@@ -1,0 +1,18 @@
+apiVersion: certmanager.k8s.io/v1alpha1
+kind: Certificate
+metadata:
+  name: cloudnativecasts
+spec:
+  secretName: cloudnativecasts-tls
+  issuerRef:
+    kind: ClusterIssuer
+    name: letsencrypt
+  commonName: cloudnativecasts.com
+  dnsNames:
+  - cloudnativecasts.com
+  acme:
+    config:
+    - http01:
+        ingressClass: nginx
+      domains:
+      - cloudnativecasts.com

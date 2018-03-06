@@ -1,0 +1,38 @@
+kind: Deployment
+apiVersion: extensions/v1beta1
+metadata:
+  name: cloudnativecasts
+  labels:
+    app: cloudnativecasts
+spec:
+  replicas: 3
+  revisionHistoryLimit: 3
+  strategy:
+    rollingUpdate:
+      maxSurge: 3
+      maxUnavailable: 1
+  selector:
+    matchLabels:
+      app: cloudnativecasts
+  template:
+    metadata:
+      labels:
+        app: cloudnativecasts
+    spec:
+      containers:
+      - name: cloudnativecasts
+        image: cloudnativecasts/website
+        env:
+        # This hash is not needed and only used to track which version is deployed when using :latest
+        - name: HASH
+          value: {{ .DroneCommit }}
+        ports:
+        - name: http
+          containerPort: 2015
+        resources:
+          requests:
+            cpu: 100m
+            memory: 64Mi
+          limits:
+            cpu: 500m
+            memory: 512Mi

@@ -13,3 +13,17 @@ pipeline:
       - 'latest'
     when:
       branch: master
+      event: push
+
+  kubernetes-api:
+    image: kubeciio/kubectl:0.2
+    kubectl: apply
+    templates:
+      - kuberentes/certificate.yaml
+      - kuberentes/ingress.yml
+      - kuberentes/service.yml
+      - kuberentes/deployment.yml
+    secrets: [ kubeconfig ]
+    when:
+      branch: master
+      event: push

@@ -1,0 +1,11 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: cloudnativecasts
+spec:
+  ports:
+  - name: http
+    targetPort: 2015
+    port: 2015
+  selector:
+    app: cloudnativecasts
