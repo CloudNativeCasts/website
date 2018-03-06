@@ -14,9 +14,9 @@
 <main>
     <section class="video">
         <div class="container">
-            <div style="text-align: center">
-                <h3 style="margin: 0;padding-top: 32px;font-weight: normal;color: #888">{{ dateFormat "January 02, 2006" .Date }}</h3>
-                <h1 style="margin: 0;padding: 16px 0;font-size: 32px;font-weight: 300;">{{ .Title }}</h1>
+            <div class="info">
+                <h3 class="date">{{ dateFormat "January 02, 2006" .Date }}</h3>
+                <h1 class="title">{{ .Title }}</h1>
             </div>
 
             <div class="youtube">
@@ -28,22 +28,26 @@
                 <div class="col-xs-6 col-previous">
                     {{ if .Page.Prev }}
                     <a href="{{ .Page.Prev.URL }}" class="previous">
-                        <span>Previous</span><br>{{ .Page.Prev.Title }}
+                        <span>Previous</span>
+                        <p>{{ .Page.Prev.Title }}</p>
                     </a>
                     {{ else}}
                     <div class="previous current">
-                        <span>Current</span><br>{{ .Page.Title }}
+                        <span>Current</span>
+                        <p>{{ .Page.Title }}</p>
                     </div>
                     {{ end }}
                 </div>
                 <div class="col-xs-6 col-next">
                     {{ if .Page.Next }}
                     <a href="{{ .Page.Next.URL }}" class="next">
-                        <span>Next</span><br>{{ .Page.Next.Title }}
+                        <span>Next</span>
+                        <p>{{ .Page.Next.Title }}</p>
                     </a>
                     {{ else}}
                     <div class="next current">
-                        <span>Current</span><br>{{ .Page.Title }}
+                        <span>Current</span>
+                        <p>{{ .Page.Title }}</p>
                     </div>
                     {{ end }}
                 </div>

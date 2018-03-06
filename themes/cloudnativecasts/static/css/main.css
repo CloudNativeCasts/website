@@ -113,12 +113,12 @@ section.videos {
     background-color: #fafafa;
 }
 
-section h1 {
+section.videos h1 {
     padding-left: calc(16px + 8px);
 }
 
 @media only screen and (min-width: 48em) {
-    section h1 {
+    section.videos h1 {
         padding-left: calc(64px + 8px);
     }
 }
@@ -176,6 +176,40 @@ section.video {
     color: white;
 }
 
+section.video .info {
+    padding: 0 16px;
+    text-align: center;
+}
+
+section.video .date {
+    margin: 0;
+    padding-top: 32px;
+    font-weight: normal;
+    color: #888;
+}
+
+section.video .title {
+    margin: 0;
+    padding: 16px 0;
+    font-size: 32px;
+    font-weight: 300;
+}
+
+section.video .youtube {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: -25px;
+    height: 0;
+}
+
+section.video .youtube iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 section.video .col-previous {
     padding-right: 0;
 }
@@ -186,18 +220,36 @@ section.video .col-next {
 
 section.video .previous, section.video .next {
     display: inline-block;
-    width: calc(100% - 64px);
-    padding: 32px;
+    width: calc(100% - 32px);
+    padding: 16px;
     border: 1px solid #5a5a5a;
-    font-size: 24px;
+    font-size: 18px;
     text-decoration: none;
     background-color: #808080;
     color: white;
 }
 
+@media only screen and (min-width: 48em) {
+    section.video .previous, section.video .next {
+        width: calc(100% - 64px);
+        padding: 32px;
+        font-size: 24px;
+    }
+}
+
 section.video .previous span, section.video .next span {
     color: #bfbfbf;
-    font-size: 18px;
+    font-size: 14px;
+}
+
+@media only screen and (min-width: 48em) {
+    section.video .previous span, section.video .next span {
+        font-size: 18px;
+    }
+}
+
+section.video .previous p, section.video .next p {
+    margin-top: 8px;
 }
 
 section.video .previous:hover, section.video .next:hover {
@@ -216,21 +268,7 @@ section.video .current, section.video .current:hover {
     background-color: rgba(128, 128, 128, 0.75);
 }
 
-.youtube {
-    position: relative;
-    padding-bottom: 56.25%;
-    padding-top: -25px;
-    height: 0;
-}
-
-.youtube iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
 main .content {
-    padding: 64px 0;
+    padding: 64px 16px;
 }
+
