@@ -2,7 +2,7 @@
 <html>
 <head>
     <head>
-    {{ partial "header.html" . }}
+        {{ partial "header.html" . }}
     </head>
 </head>
 <body>
@@ -25,29 +25,41 @@
                 </iframe>
             </div>
             <div class="row">
-            {{ if .Page.Prev }}
-                <a href="{{ .Page.Prev.URL }}">
-                    <div class="col-xs-6">
-                        <span>Next</span><br>{{ .Page.Prev.Title }}
+                <div class="col-xs-6 col-previous">
+                    {{ if .Page.Prev }}
+                    <a href="{{ .Page.Prev.URL }}" class="previous">
+                        <span>Previous</span><br>{{ .Page.Prev.Title }}
+                    </a>
+                    {{ else}}
+                    <div class="previous current">
+                        <span>Current</span><br>{{ .Page.Title }}
                     </div>
-                </a>
-            {{ end }}
-                <br>
-            {{ if .Page.Next }}
-                <a href="{{ .Page.Next.URL }}">
-                    <div class="col-xs-6">
+                    {{ end }}
+                </div>
+                <div class="col-xs-6 col-next">
+                    {{ if .Page.Next }}
+                    <a href="{{ .Page.Next.URL }}" class="next">
                         <span>Next</span><br>{{ .Page.Next.Title }}
+                    </a>
+                    {{ else}}
+                    <div class="next current">
+                        <span>Current</span><br>{{ .Page.Title }}
                     </div>
-                </a>
-            {{ end }}
+                    {{ end }}
+                </div>
             </div>
         </div>
     </section>
-    <div class="container">
-    {{ .Content }}
-
-
-    </div>
+    <section class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+                    <h1>{{ .Title }}</h1>
+                    {{ .Content }}
+                </div>
+            </div>
+        </div>
+    </section>
 </main>
 
 {{ partial "footer.html" . }}

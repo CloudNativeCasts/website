@@ -2,7 +2,7 @@
 <html>
 <head>
     <head>
-    {{ partial "header.html" . }}
+        {{ partial "header.html" . }}
     </head>
 </head>
 <body>
@@ -27,35 +27,35 @@
 <section class="videos">
     <div class="container">
         <ul>
-        {{ $index := 0 }}
-        {{ range $i, $page := .Data.Pages.ByWeight }}
+            {{ $index := 0 }}
+            {{ range $i, $page := .Data.Pages.ByWeight }}
             {{ $index := $i }}
             <li>
-            {{ if modBool $i 2 }}
-            <div class="row" style="background-color: #fff">
-            {{ else }}
-            <div class="row" style="background-color: #f7f7f7">
-            {{ end }}
-                <div class="col-xs-12 col-sm-3">
-                    <a href="{{ .Permalink }}">
-                        <img src="https://img.youtube.com/vi/{{ .Params.youtubeid }}/maxresdefault.jpg" alt=""
-                             style="max-width: 100%">
-                    </a>
+                {{ if modBool $i 2 }}
+                    <div class="row" style="background-color: #fff">
+                {{ else }}
+                    <div class="row" style="background-color: #f7f7f7">
+                {{ end }}
+                    <div class="col-xs-12 col-sm-3">
+                        <a href="{{ .Permalink }}">
+                            <img src="https://img.youtube.com/vi/{{ .Params.youtubeid }}/maxresdefault.jpg" alt=""
+                                 style="max-width: 100%">
+                        </a>
+                    </div>
+                    <div class="col-xs-12 col-sm-9" style="padding-left: 64px;">
+                        <a href="{{ .Permalink }}">
+                            <span class="episode">Episode {{ add $i 1 }}</span>
+                            <h2 class="title">{{ .Title }}</h2>
+                        </a>
+                        {{ .Content }}
+                    </div>
                 </div>
-                <div class="col-xs-12 col-sm-9" style="padding-left: 64px;">
-                    <a href="{{ .Permalink }}">
-                        <span class="episode">Episode {{ add $i 1 }}</span>
-                        <h2 class="title">{{ .Title }}</h2>
-                    </a>
-                {{ .Content }}
-                </div>
-            </div>
             </li>
-        {{ end }}
+            {{ end }}
             <li>
                 <div class="row">
                     <div class="col-xs-12">
-                        <h3>More coming soon!</h3>
+                        <h3>More Videos coming soon!</h3>
                         <p>Subscribe &amp; follow for Updates.</p>
                     </div>
                 </div>

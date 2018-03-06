@@ -6,6 +6,15 @@ body {
     color: rgba(0, 0, 0, 0.8);
 }
 
+a {
+    color: #326ce5;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 header a {
     text-decoration: none;
 }
@@ -108,6 +117,46 @@ section.video {
     color: white;
 }
 
+section.video .col-previous {
+    padding-right: 0;
+}
+
+section.video .col-next {
+    padding-left: 0;
+}
+
+section.video .previous, section.video .next {
+    display: inline-block;
+    width: calc(100% - 64px);
+    padding: 32px;
+    border: 1px solid #5a5a5a;
+    font-size: 24px;
+    text-decoration: none;
+    background-color: #808080;
+    color: white;
+}
+
+section.video .previous span, section.video .next span {
+    color: #bfbfbf;
+    font-size: 18px;
+}
+
+section.video .previous:hover, section.video .next:hover {
+    background-color: #8f8f8f;
+}
+
+section.video .previous {
+    text-align: left;
+}
+
+section.video .next {
+    text-align: right;
+}
+
+section.video .current, section.video .current:hover {
+    background-color: rgba(128, 128, 128, 0.75);
+}
+
 .youtube {
     position: relative;
     padding-bottom: 56.25%;
@@ -121,4 +170,8 @@ section.video {
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+main .content {
+    padding: 64px 0;
 }
