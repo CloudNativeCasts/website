@@ -8,5 +8,5 @@ tags:
 weight: 1
 ---
 
-In this video we're going to create a small http server
-that responds with random Cloud Native Computing Foundation project names.
+In this video we're going to create a small [HTTP](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) server
+that responds with random Cloud Native Computing Foundation ([cncf.io](https://cncf.io)) project names.
