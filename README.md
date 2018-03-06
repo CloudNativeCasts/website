@@ -1,6 +1,8 @@
 # CloudNativeCasts Website
 
-This is the website for CloudNativeCasts: [https://cloudnativecasts.com](https://cloudnativecasts.com).
+[https://cloudnativecasts.com](https://cloudnativecasts.com).
+
+### Development
 
 [Hugo](https://gohugo.io) is used to compile all static files, including the markdown files, into a static website.  
 The only other dependencies are [flexboxgrid.com](http://flexboxgrid.com) and [fontawesome.com](https://fontawesome.com).  
