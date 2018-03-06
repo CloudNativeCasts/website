@@ -1,0 +1,15 @@
+pipeline:
+  hugo:
+    image: cbrgm/drone-hugo
+    pull: true
+    validate: true
+    url: https://cloudnativecasts.com/
+
+  docker:
+    image: plugins/docker
+    repo: cloudnativecasts/website
+    secrets: [ docker_username, docker_password ]
+    tags:
+      - 'latest'
+    when:
+      branch: master
