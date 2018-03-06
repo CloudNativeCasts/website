@@ -16,10 +16,21 @@ a:hover {
 }
 
 header a {
+    color: white;
     text-decoration: none;
 }
 
-header h1 {
+header .brand {
+    text-align: center;
+}
+
+@media only screen and (min-width: 48em) {
+    header .brand {
+        text-align: left;
+    }
+}
+
+header .brand h1 {
     display: inline-block;
     color: white;
     font-weight: 300;
@@ -28,7 +39,15 @@ header h1 {
 }
 
 header .icons {
-    text-align: right;
+    font-size: 12px;
+    text-align: center;
+}
+
+@media only screen and (min-width: 48em) {
+    header .icons {
+        font-size: 18px;
+        text-align: right;
+    }
 }
 
 header .icons a {
@@ -71,15 +90,37 @@ footer .sitemap a {
 
 .hero {
     background-color: #326ce5;
-    padding: 64px 0;
-    color: white;
-    font-size: 64px;
+    padding: 64px 16px;
+}
+
+.hero .title {
+    padding-bottom: 32px;
+    text-align: center;
+    font-size: 32px;
     font-weight: 300;
+    color: white;
+}
+
+@media only screen and (min-width: 48em) {
+    .hero .title {
+        font-size: 64px;
+        text-align: left;
+    }
 }
 
 section.videos {
     padding: 64px 0;
     background-color: #fafafa;
+}
+
+section h1 {
+    padding-left: calc(16px + 8px);
+}
+
+@media only screen and (min-width: 48em) {
+    section h1 {
+        padding-left: calc(64px + 8px);
+    }
 }
 
 section.videos ul {
@@ -93,7 +134,25 @@ section.videos ul li {
 
 section.videos ul li .row {
     margin: 0;
-    padding: 64px;
+    padding: 16px;
+}
+
+@media only screen and (min-width: 48em) {
+    section.videos ul li .row {
+        padding: 64px;
+    }
+}
+
+section.videos ul li .row .info {
+    margin-top: 16px;
+    padding-left: 8px;
+}
+
+@media only screen and (min-width: 48em) {
+    section.videos ul li .row .info {
+        margin-top: 0;
+        padding-left: 64px;
+    }
 }
 
 section.videos ul li a {

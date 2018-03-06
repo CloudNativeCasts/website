@@ -14,10 +14,10 @@
 <div class="hero">
     <div class="container">
         <div class="row">
-            <div class="col-xs-12 col-md-7">
-                Learn how to build an App for Kubernetes
+            <div class="col-xs-12 col-sm-7 title">
+                <span>Learn how to build an App for Kubernetes</span>
             </div>
-            <div class="col-xs-12 col-md-5" style="text-align: center">
+            <div class="col-xs-12 col-sm-5" style="text-align: center">
                 <img src="{{ .Site.BaseURL }}/images/kubernetes.svg" alt="Kubernetes" height="256">
             </div>
         </div>
@@ -26,6 +26,9 @@
 
 <section class="videos">
     <div class="container">
+
+        <h1>Episodes</h1>
+
         <ul>
             {{ $index := 0 }}
             {{ range $i, $page := .Data.Pages.ByWeight }}
@@ -42,7 +45,7 @@
                                  style="max-width: 100%">
                         </a>
                     </div>
-                    <div class="col-xs-12 col-sm-9" style="padding-left: 64px;">
+                    <div class="col-xs-12 col-sm-9 info">
                         <a href="{{ .Permalink }}">
                             <span class="episode">Episode {{ add $i 1 }}</span>
                             <h2 class="title">{{ .Title }}</h2>
